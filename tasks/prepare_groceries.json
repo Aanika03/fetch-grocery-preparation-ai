@@ -1,0 +1,23 @@
+{
+  "task_name": "Prepare Groceries",
+  "objective": "Sort and place grocery items into appropriate locations",
+  "steps": [
+    "Navigate to grocery area",
+    "Scan environment for grocery items",
+    "Pick up grocery items",
+    "Sort items by category",
+    "Place items on counters, shelves, or storage areas",
+    "Align items neatly",
+    "Verify task completion"
+  ],
+  "constraints": [
+    "Avoid collisions",
+    "Maintain stable grasp",
+    "Do not damage items"
+  ],
+  "completion_criteria": [
+    "All grocery items placed correctly",
+    "No items left on the floor",
+    "Items sorted by category"
+  ]
+}
