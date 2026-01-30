@@ -1,0 +1,17 @@
+import torch
+from model import FetchGroceryPreparationModel
+
+def test_model():
+    model = FetchGroceryPreparationModel(state_dim=30)
+    obs = torch.zeros(30)
+
+    with torch.no_grad():
+        action = model(obs)
+
+    assert action.shape == (1, 13)
+    assert action.min() >= -1.0 and action.max() <= 1.0
+
+    print("✅ Fetch grocery preparation model is compatible")
+
+if __name__ == "__main__":
+    test_model()
