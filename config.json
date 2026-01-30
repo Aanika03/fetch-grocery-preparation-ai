@@ -1,0 +1,17 @@
+{
+  "model_type": "fetch_control",
+  "version": "1.0",
+  "architecture": "mlp",
+  "input_type": "state",
+  "input_dim": 30,
+  "output_dim": 13,
+  "control_mode": "pd_joint_delta_pos",
+  "framework": "pytorch",
+  "training_config": {
+    "env_id": "ReplicaCAD_SceneManipulation-v1",
+    "task": "prepare_groceries",
+    "algorithm": "BC",
+    "seed": 42
+  },
+  "device": "cpu"
+}
