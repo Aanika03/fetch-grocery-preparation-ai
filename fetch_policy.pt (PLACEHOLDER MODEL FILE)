@@ -1,0 +1,17 @@
+import torch
+from model import FetchGroceryPreparationModel
+
+model = FetchGroceryPreparationModel(state_dim=30)
+
+torch.save(
+    {
+        "model_state_dict": model.state_dict(),
+        "metadata": {
+            "model_type": "fetch_control",
+            "task": "prepare_groceries",
+            "output_dim": 13,
+            "control_mode": "pd_joint_delta_pos"
+        }
+    },
+    "fetch_policy.pt"
+)
